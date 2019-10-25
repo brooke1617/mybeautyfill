@@ -1,0 +1,863 @@
+/* Misc */
+body {
+    font-family: 'Maven Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.animate-table tr {
+    transition: 300ms ease;
+}
+
+.color-secondary {
+    color: #89cab2;
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    z-index: 1025;
+}
+
+.navbar a {
+    color: #222;
+}
+
+.navbar a.btn {
+    color: #fff;
+}
+
+.btn-primary,
+.alert-primary,
+.dropdown-item.active,
+.dropdown-item:active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:hover,
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #b786c9;
+    border-color: #b786c9;
+    color: #fff;
+}
+
+a {
+    color: #b786c9;
+}
+
+
+.btn-outline-primary {
+    background-color: #fff;
+    border-color: #b786c9;
+    color: #b786c9;
+}
+
+.btn-secondary,
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.list-group-item.active,
+.alert-secondary {
+    background-color: #89cab2;
+    border-color: #89cab2;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: #794381;
+    border-color: #794381;
+}
+
+a.navbar-brand {
+    max-width: 195px;
+}
+
+
+
+.btn {
+    border-radius: 15px;
+}
+
+.form-control {
+    height: 51px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid #b7b7b7;
+}
+
+
+
+/* .homepage-intro-container {} */
+
+
+
+.homepage-intro-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.homepage-intro {
+    background-size: cover;
+    background-position: center;
+    /*margin-bottom: 60px;
+    min-height: 80vh;*/
+    /*padding: 60px 20px;*/
+}
+
+.homepage-white-bg {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 60px 20px;
+}
+
+.homepage-intro-user {
+    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551878672/my-beauty-fill/placeholders/homepage-search-bg.jpg");
+}
+
+.homepage-intro-biz {
+    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551911345/my-beauty-fill/placeholders/business-bg-c.jpg");
+}
+
+.business-homepage {
+    padding: 60px 20px;
+}
+
+
+
+
+
+
+.homepage-intro-user-content {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    /*border-radius: 4px;*/
+    padding: 54px 50px;
+    /*width: 441px;*/
+}
+
+.homepage-intro-business-block {
+    background-color: #414141;
+    padding: 38px 50px;
+    color: #cfcfcf;
+}
+
+.homepage-intro-container .homepage-intro-business-block h1 {
+    font-size: 27px;
+}
+
+/* .homepage-intro-biz .homepage-intro-user-content { */
+    /*background: #222;
+    color: #fff;*/
+/* } */
+
+.homepage-intro-biz .homepage-intro-user-content h1 {
+    font-size: 22px;
+}
+
+.homepage-autocomplete-box {
+    position: absolute;
+    max-height: 215px;
+    overflow-y: scroll;
+    /*border-radius: 8px;*/
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.homepage-booking-selection {
+    display: none;
+}
+
+
+/* .discover-container {} */
+
+.discover-container a {
+    color: #222;
+    font-size: 20px;
+}
+
+.discover-container a:hover p {
+    transform: scale(1.1);
+}
+
+.discover-option {
+    transition: all 300ms ease;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.discover-option-label {
+    transition: all 300ms ease;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+}
+
+
+
+.discover-shop-container {
+    margin-bottom: 90px;
+}
+
+.discover-shop-item {
+    background-color: #222;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.discover-shop-item-bg {
+    background-color: rgba(121, 67, 129, 0.8);
+    min-height: 250px;
+    padding: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.discover-shop-item p {
+    margin: 0;
+    padding: 8px;
+    text-shadow: 3px 3px 6px #222;
+}
+
+
+
+.business-block {
+    /*margin-bottom: 90px;*/
+    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551911345/my-beauty-fill/placeholders/business-bg-c.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.business-block-dark {
+    padding: 60px 0;
+    background-color: rgba(34, 34, 34, 0.8);
+}
+
+.business-block h2 {
+    margin-bottom: 30px;
+}
+
+.business-block-content p {
+    margin: 0;
+}
+
+/*.business-block-content {
+    max-width: 740px;
+    margin: 0 auto;
+}*/
+
+
+.footer-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+footer {
+    color: #a9acab;
+    background: #242626;
+    padding: 90px 0;
+}
+
+
+
+
+
+
+
+
+
+/* About Us */
+.about-us-h1 {
+    text-align: center;
+    padding: 60px 0px;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* Sign Up */
+.join-bg {
+    background-image: url('https://res.cloudinary.com/dgbhin72l/image/upload/v1552614226/my-beauty-fill/placeholders/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 60px 0px;
+    min-height: 615px;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.join-bg .white-bg {
+    padding: 60px 20px;
+}
+
+.join-bg h1 {
+    font-weight: 100;
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+
+.join-loader {
+    transition: transform 300ms ease;
+}
+
+.join-loader img {
+    max-width: 100px;
+    animation-name: loadingGif;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+@keyframes loadingGif {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.join-loader form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Business page */
+.numbered-cards-container {
+    padding-top: 60px;
+    height: 100%;
+}
+
+.numbered-cards {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
+
+.numbered-cards.active {
+    background-color: #b786c9;
+}
+
+.numbered-cards .numbered-cards-num {
+    border: 2px solid rgba(0, 0, 0, 1);
+    padding: 9px 5px;
+    margin: -60px auto 15px auto;
+    background-color: #fff;
+    display: block;
+    width: 73px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.numbered-card-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.numbered-cards .numbered-cards-num p.strong {
+    font-weight: 600;
+}
+
+.numbered-cards .numbered-cards-num p:last-child {
+    margin: 0;
+}
+
+.join-page-banner * {
+    margin: 0;
+}
+
+.join-page-banner-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.join-page-banner-details {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+.StripeElement {
+    box-sizing: border-box;
+
+    height: 40px;
+
+    padding: 10px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.business-hours {
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* Individual Business Page */
+.business-content-container {
+    border-right: 1px solid #eee;
+    min-height: 900px;
+    padding-right: 30px;
+}
+
+.business-header-bg {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.business-header-height {
+    min-height: 300px;
+}
+
+.business-header-title {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 8px 8px 0 0;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px 30px;
+    display: inline-block;
+
+    border-radius: 0px 75px 0 0;
+    padding: 15px 70px 0 15px;
+    position: absolute;
+    bottom: 0px;
+    left: -1px;
+}
+
+.business-header-title a {
+    color: #222;
+}
+
+.business-header-title * {
+    margin: 0;
+}
+
+.business-header-title .verified-business-badge {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.business-description {
+    /*border-bottom: 1px solid #eee;*/
+    /*padding-bottom: 30px;*/
+    margin-bottom: 30px;
+}
+
+.business-google-maps {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#business-google-maps-container {
+    height: 300px;
+}
+
+.business-info {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.business-info label {
+    font-weight: 700;
+    margin: 0;
+    display: block;
+}
+
+.business-info a {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.business-cancel-policy {
+    text-align: right;
+}
+
+.business-services-item {
+    /*border-top: 1px solid #eee;*/
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.business-services-item:nth-of-type(odd) {
+    background-color: #fafafa;
+}
+
+
+.business-services h3 {
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+.business-services-item p {
+    margin: 0;
+}
+
+.edit-business-headerbg {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 225px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid rgb(183, 134, 201);
+}
+
+.edit-business-headerbg>div {
+    background-color: rgba(183, 134, 201, 0.9);
+    border-radius: 8px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 300ms ease;
+}
+
+.edit-business-headerbg>div>span {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.edit-business-headerbg>div.edit-biz-save-prompt {
+    opacity: 1;
+}
+
+
+
+.business-employees-action {
+    width: 265px;
+}
+
+.business-employees-action i {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 200ms ease;
+}
+
+.business-employees-action i:hover {
+    /*border: 2px solid #b786c9;*/
+    background-color: #fff;
+}
+
+.business-edit-services-save {
+    position: sticky;
+    bottom: 0px;
+    background-color: #fff;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+}
+
+.business-schedule-block {
+    margin-bottom: 60px;
+}
+
+
+.schedules-container {
+    overflow-x: scroll;
+}
+
+.schedules-container-block-row {
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.schedules-container-block-row button {
+    min-width: 92px;
+}
+
+.schedules-container-block {
+    padding: 20px 0;
+    border: 1px solid #eeeeee;
+    transition: background-color 200ms;
+    min-width: 60px;
+}
+
+.block-empty {
+    background-color: #eeeeee;
+}
+
+.block-available {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.block-booked {
+    background-color: #222;
+    color: #fff;
+}
+
+/*.block-available:hover {
+    background-color: #9b59b6;
+}*/
+
+.schedule-block-name {
+    padding: 4px;
+    min-width: 70px;
+    border: 1px solid transparent;
+    margin: 0;
+}
+
+.business-employee-remove-vacation-time-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-employee-remove-vacation-time {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 21px;
+}
+
+
+.booking-container {
+    border: 1px solid
+}
+
+.schedules-container-blockb786c9 {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Account */
+.edit-profile-tab label {
+    padding-top: 7px;
+}
+
+.account-sticky-pills-nav {
+    top: 121px;
+}
+
+.appointments-tab table td {
+    vertical-align: middle;
+}
+
+homepage-intro-container .appointments-tab .appointments-time p:last-child {
+    font-size: 12px;
+}
+
+.homepage-intro-message-container {
+    max-width: 865px;
+    display: none;
+}
+
+.homepage-intro-user-content-container {
+    max-width: 488px;
+}
+
+.homepage-intro-message {
+    line-height: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Booking */
+#book-google-maps-container {
+    height: calc(100vh - 92px);
+    width: 100%;
+}
+
+.brand-item {
+    margin-bottom: 20px;
+}
+
+.brand-item-content {
+    padding: 20px;
+}
+
+.maps-search.sticky-top {
+    top: 92px;
+}
+
+.edit-your-services-item {
+    margin-bottom: 15px;
+}
+
+/* .edit-your-services-item .custom-checkbox {} */
+
+.edit-your-services-item input[type='number'] {
+    max-width: 75px;
+    display: inline-block;
+    height: 35px;
+    display: none;
+}
+
+.business-dashboard-revenue .card-text,
+.business-dashboard-apptsmade .card-text {
+    font-size: 50px;
+}
+
+.business-dashboard-apptsmade .card-title {
+    font-size: 21px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .about-us-h1 {
+        padding: 135px 0px;
+        font-size: 64px;
+    }
+
+    .business-dashboard-revenue .card-text,
+    .business-dashboard-apptsmade .card-text {
+        font-size: 28px;
+    }
+
+    .business-dashboard-apptsmade .card-title,
+    .business-dashboard-revenue .card-title {
+        font-size: 11px;
+    }
+
+    .homepage-intro-container h1 {
+        font-size: 36px;
+    }
+
+    .join-bg h1 {
+        font-size: 64px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .business-dashboard-revenue .card-text,
+    .business-dashboard-apptsmade .card-text {
+        font-size: 40px;
+    }
+
+    .business-dashboard-apptsmade .card-title,
+    .business-dashboard-revenue .card-title {
+        font-size: 18px;
+    }
+
+    .homepage-intro-message {
+        font-size: 60px;
+        border-left: 30px solid #6e2a8d;
+        padding-left: 30px;
+    }
+
+    .homepage-intro-message-container {
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .business-dashboard-revenue .card-text,
+    .business-dashboard-apptsmade .card-text {
+        font-size: 50px;
+    }
+
+    .business-dashboard-apptsmade .card-title,
+    .business-dashboard-revenue .card-title {
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .homepage-intro-message {
+        font-size: 97px;
+        border-left: 35px solid #6e2a8d;
+        padding-left: 35px;
+    }
+}
