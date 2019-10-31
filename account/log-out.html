@@ -23,7 +23,7 @@
     
 
 
-    <title>Business | My Beautyfill</title>
+    <title>Home | My Beautyfill</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135925296-1"></script>
@@ -57,14 +57,14 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto text-lg-left text-center">
-            <li class="nav-item mr-lg-3 ">
+            <li class="nav-item mr-lg-3 active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-lg-3 ">
-                <a class="nav-link" href="/about.php">About</a>
+                <a class="nav-link" href="/about.html">About</a>
             </li>
             <li class="nav-item mr-lg-3 ">
-                <a class="nav-link" href="/features.php">Features</a>
+                <a class="nav-link" href="/features.html">Features</a>
             </li>
 
 
@@ -72,13 +72,13 @@
 
             
                 <li class="nav-item mr-lg-3 ">
-                    <a class="nav-link" href="/account/join.php">Sign Up</a>
+                    <a class="nav-link" href="/account/join.html">Sign Up</a>
                 </li>
                 <li class="nav-item mr-lg-3 ">
-                    <a class="nav-link" href="/account/beautify.php">Log In</a>
+                    <a class="nav-link" href="/account/beautify.html">Log In</a>
                 </li>
                 <li class="mr-lg-3 ">
-                    <a class="btn btn-dark" href="/business.php">For Business</a>
+                    <a class="btn btn-dark" href="/business.html">For Business</a>
                 </li>
 
             
@@ -87,7 +87,7 @@
 
 
             <li class="nav-item ">
-                <a class="nav-link" href="/help.php">Help</a>
+                <a class="nav-link" href="/help.html">Help</a>
             </li>
 
                     </ul>
@@ -95,93 +95,111 @@
 </nav>
 
 
-    <div class="homepage-intro-container mb-5">
-        <div class="homepage-intro d-flex align-items-center justify-content-center homepage-intro-biz business-homepage">
-            <div class="homepage-intro-user-content text-center">
-                <h1>Are you a Beauty Professional or Indie Beauty Brand?</h1>
-                <p>First Beauty experience software for brands and independent professionals.</p>
 
 
-                <div class="mb-3">
-                    <a href="/account/join.php?type=business" class="btn btn-primary btn-lg">Try it now</a>
-                </div>
 
 
-                <h4>Try it risk free for 30 days!</h4>
-                <p>No risk, and no credit card required!</p>
+
+    <div class="alert alert-primary text-center alert-logged-out" role="alert" style="margin-bottom:0;">
+        You have been logged out.
+    </div>
+    <script>
+        setTimeout(function() {
+            $(".alert-logged-out").slideUp();
+        }, 3000);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="homepage-intro-container  homepage-intro homepage-intro-user">
+    <div class="homepage-white-bg row align-items-center justify-content-around no-gutters">
+        <div class="col homepage-intro-message-container">
+            <div class="homepage-intro-message">
+                Connecting clients to the best beauty service professionals.
+            </div>
+        </div>
+
+        <div class="col homepage-intro-user-content-container">
+            <div class="homepage-intro-user-content">
+                <h1>Book your ultimate beauty appointment.</h1>
+
+                <form action="book.html" method="GET" id="homepage-book">
+                    <div class="form-group position-relative">
+                        <label for="homepage-intro-user-discover">Discover</label>
+                        <div class="alert alert-success homepage-booking-selection">Please choose from the options list.</div>
+                        <input type="text" class="form-control" name="service" id="homepage-intro-user-discover" placeholder="Brands, Product type, Services" required>
+                        <div class="homepage-autocomplete-box">
+                            <div class="list-group"></div>
+                        </div>
+                    </div><!-- end form group -->
+
+                    <div class="d-none">
+                        <input type="hidden" name="serviceID">
+                    </div><!-- end form group -->
+
+                    <div class="form-group mb-4">
+                        <label for="homepage-intro-user-where">Where</label>
+                        <input type="text" class="form-control" name="location" id="homepage-intro-user-where" placeholder="Enter City, State or Zip Code" required>
+                    </div><!-- end form group -->
+
+                    <div class="">
+                        <button type="submit" class="btn btn-primary btn-lg">Search</button>
+                    </div>
+                </form>
             </div><!-- end content -->
-        </div><!-- end user div -->
+            <div class="homepage-intro-business-block">
+                <h1>Are you a beauty professional?</h1>
+                <a href="/business.html" class="btn btn-primary btn-lg">Start Now</a>
+            </div><!-- end business block -->
+        </div><!-- end col -->
+    </div><!-- end white bg -->
     </div><!-- end row -->
 
 
-    <div class="container">
-        <h2 class="text-center">Why My Beautyfill?</h2>
 
 
-        <div class="row mb-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="numbered-cards-container">
-                    <div class="numbered-cards">
-                        <div class="numbered-cards-num">1</div>
-                        <p class="strong">Get Online</p>
-                        <p>Set up your professional website and let clients know you're available to be booked online. Include your services, business
-                            hours and photo gallery.</p>
-                    </div><!-- end numbered cards -->
-                </div><!-- end container -->
-            </div><!-- end col -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="numbered-cards-container">
-                    <div class="numbered-cards">
-                        <div class="numbered-cards-num">2</div>
-                        <p class="strong">Get Organized</p>
-                        <p>Manage your schedule and client notes. Appointment reminders are sent automatically.</p>
-                    </div><!-- end numbered cards -->
-                </div><!-- end container -->
-            </div><!-- end col -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="numbered-cards-container">
-                    <div class="numbered-cards">
-                        <div class="numbered-cards-num">3</div>
-                        <p class="strong">Get Booked</p>
-                        <p>Use your new VIP link to promote yourself online through social media, email marketing or by running a promotion. Make it
-                            easy for clients to find and book you.</p>
-                    </div><!-- end numbered cards -->
-                </div><!-- end container -->
-            </div><!-- end col -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="numbered-cards-container">
-                    <div class="numbered-cards">
-                        <div class="numbered-cards-num">4</div>
-                        <p class="strong">Get Paid</p>
-                        <p>Instantly accept credit card payments or set up a no-show late cancellation policy. Get next day payouts directly to your
-                            bank account.</p>
-                    </div><!-- end numbered cards -->
-                </div><!-- end container -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
 
 
-    <section class="container join-page-banner mb-5">
-        <div class="row align-items-center justify-content-center">
-            <div>
-                <div class="join-page-banner-price">$30/MO</div>
-                <div class="join-page-banner-details">dead simple pricing</div>
-            </div>
 
-            <p class="mx-5">
-                <a class="btn btn-primary btn-lg" href="/account/join.php?type=business">Try it now</a>
-            </p>
 
-            <div>
-                <h4>Try it risk free for 30 days!</h4>
-                <p>No risk, and no credit card required!</p>
-            </div>
-        </div><!-- end row -->
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="business-block">
+    <div class="business-block-dark">
+    <div class="business-block-content">
+        <h1>Are you a Beauty Brand or Professional Stylist?</h1>
+        <h2>Curate your brand experience, manage your business & grow your following.</h2>
+        <p><a href="/business.html" class="btn btn-primary btn-lg">Set up my Brand</a></p>
+    </div>
+</div>
+</div>
+
+
+
 
 
 
@@ -209,7 +227,7 @@
                 <p><a href="#">Careers</a></p>
                 <p><a href="#">Terms for MBF Pros</a></p>
                 <p><a href="#">Terms for MBF Clients</a></p>-->
-                <p><a href="/privacy-policy.php">Privacy</a></p>
+                <p><a href="/privacy-policy.html">Privacy</a></p>
                 <p><a href="#">Sitemap</a></p>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -245,7 +263,7 @@ let servicesList = [["1","Coloring"],["2","Color Correction &amp; New Color"],["
 
 
 <script>
-    if(window.location.pathname === "/business/complete-booking.php" || window.location.pathname === "/business/subscription.php") {
+    if(window.location.pathname === "/business/complete-booking.html" || window.location.pathname === "/business/subscription.html") {
 
 
     // Create a Stripe client.
@@ -338,4 +356,3 @@ let servicesList = [["1","Coloring"],["2","Color Correction &amp; New Color"],["
 
 </body>
 </html>
-

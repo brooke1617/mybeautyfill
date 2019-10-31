@@ -44,7 +44,7 @@ $(document).ready(function() {
     var template_join2 = "";
     var template_join =
         `
-        <form action="/account/join.php" method="post" id="mybeautyfill-form-join">
+        <form action="/account/join.html" method="post" id="mybeautyfill-form-join">
   <div class="form-group">
     <label for="join-field-email">Email address</label>
     <input type="email" class="form-control" id="join-field-email" name="join-field-email" placeholder="" required>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     var template_beautify2 = "";
     var template_beautify =
         `
-        <form action="/account/beautify.php" method="post" id="mybeautyfill-form-login">
+        <form action="/account/beautify.html" method="post" id="mybeautyfill-form-login">
   <div class="form-group">
     <label for="join-field-email">Email address</label>
     <input type="email" class="form-control" id="join-field-email" name="join-field-email" placeholder="" required>
@@ -205,7 +205,7 @@ $(document).ready(function() {
             localStorage.setItem("account-tab", "#v-pills-edit-profile");
         }
 
-        location.href = "/account.php";
+        location.href = "/account.html";
     });
 
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
 
 
-    if(location.pathname === "/business/view.php") {
+    if(location.pathname === "/business/view.html") {
         let weatherAPI = "https://api.openweathermap.org/data/2.5/forecast?zip=" + weatherZIP + ",us&APPID=9ad35921d0b6e93612c32b4732f38c07";
 
         // this is working but not sure how to read API yet. Uncomment to get started
@@ -254,7 +254,7 @@ $(document).ready(function() {
 
         $.ajax({
             //beforeSend: spinningIcon(thisBtn),
-            url: "/business/employees.php",
+            url: "/business/employees.html",
             data: {
                 generateEmployeeSchedule: "generateEmployeeSchedule",
                 dataID: dataID,
@@ -298,7 +298,7 @@ $(document).ready(function() {
 
         $.ajax({
             //beforeSend: spinningIcon(thisBtn),
-            url: "/business/employees.php",
+            url: "/business/employees.html",
             data: {
                 generateEmployeeBreaks: "generateEmployeeBreaks",
                 dataID: dataID,
@@ -346,7 +346,7 @@ $(document).ready(function() {
 
         $.ajax({
             //beforeSend: spinningIcon(thisBtn),
-            url: "/business/employees.php",
+            url: "/business/employees.html",
             data: {
                 generateEmployeeDaysOff: "generateEmployeeDaysOff",
                 dataID: dataID,
@@ -377,7 +377,7 @@ $(document).ready(function() {
         if(confirmDelete2) {
             $(this).parent().slideUp();
             $.ajax({
-                url: "/business/employees.php",
+                url: "/business/employees.html",
                 data: {
                     deleteDayoff: "deleteDayoff",
                     dataID: dataID
@@ -405,7 +405,7 @@ $(document).ready(function() {
         let thisBtn = $(this);
         $.ajax({
             beforeSend: spinningIcon(thisBtn),
-            url: "/account.php",
+            url: "/account.html",
             data: {
                 resendConfirmEmail: "resendConfirmEmail",
             },
@@ -446,7 +446,7 @@ $(document).ready(function() {
         if(confirmDelete) {
         $.ajax({
             beforeSend: spinningIcon(thisBtn),
-            url: "/business/employees.php",
+            url: "/business/employees.html",
             data: {
                 dataDeleteAction: "dataDeleteAction",
                 dataID: dataID,
@@ -540,7 +540,7 @@ $(document).ready(function() {
         let bookService = $(this).attr("data-service");
         let bookID = $(this).attr("data-id");
 
-        let url = "/business/complete-booking.php?id=" + bookID + "&book=" + bookService + "&empl=" + bookEmpl + "&date=" + bookDate + "&time=" + bookTime;
+        let url = "/business/complete-booking.html?id=" + bookID + "&book=" + bookService + "&empl=" + bookEmpl + "&date=" + bookDate + "&time=" + bookTime;
         window.location = url;
     });
 
