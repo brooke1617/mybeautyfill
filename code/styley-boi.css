@@ -103,17 +103,17 @@ a.navbar-brand {
     /*padding: 60px 20px;*/
 }
 
-.homepage-white-bg {
+/* .homepage-white-bg {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 60px 20px;
-}
+} */
 
 .homepage-intro-user {
-    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551878672/my-beauty-fill/placeholders/homepage-search-bg.jpg");
+    background-image: url("../assets/images/revised_homepgmbf.svg");
 }
 
 .homepage-intro-biz {
-    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551911345/my-beauty-fill/placeholders/business-bg-c.jpg");
+    background-image: url("../assets/images/revised_homepgmbf.svg");
 }
 
 .business-homepage {
@@ -238,7 +238,7 @@ a.navbar-brand {
 
 .business-block {
     /*margin-bottom: 90px;*/
-    background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551911345/my-beauty-fill/placeholders/business-bg-c.jpg");
+    /* background-image: url("https://res.cloudinary.com/dgbhin72l/image/upload/v1551911345/my-beauty-fill/placeholders/business-bg-c.jpg"); */
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -831,8 +831,9 @@ homepage-intro-container .appointments-tab .appointments-time p:last-child {
 
     .homepage-intro-message {
         font-size: 60px;
-        border-left: 30px solid #6e2a8d;
+        /* border-left: 30px solid #6e2a8d; */
         padding-left: 30px;
+        color: white;
     }
 
     .homepage-intro-message-container {
@@ -856,8 +857,8 @@ homepage-intro-container .appointments-tab .appointments-time p:last-child {
 
 @media screen and (min-width: 1500px) {
     .homepage-intro-message {
-        font-size: 97px;
-        border-left: 35px solid #6e2a8d;
+        font-size: 85px;
+        /* border-left: 35px solid #6e2a8d; */
         padding-left: 35px;
     }
 }
