@@ -316,6 +316,21 @@ footer {
     
 }
 
+/* Features us */
+.features-us-h1 {
+    background-image: url("../assets/images/MBF-Website-BANNERS-purp-head2.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0px;
+}
+.features-us-h2 {
+    background-image: url("../assets/images/MBF-Website-BANNERS-purp-feat.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 180px 0px;
+}
 
 
 
