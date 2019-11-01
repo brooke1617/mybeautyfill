@@ -37,7 +37,6 @@
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LezDpgUAAAAAFHyjGS9Y5YnMw8LNG05x618108V"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvKf5pJ6VhIfH4f5V4uq589BGT-AfsVvk&libraries=places"></script>
-    <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
 
 
@@ -61,10 +60,10 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-lg-3 ">
-                <a class="nav-link" href="/about.php">About</a>
+                <a class="nav-link" href="/about.html">About</a>
             </li>
             <li class="nav-item mr-lg-3 ">
-                <a class="nav-link" href="/features.php">Features</a>
+                <a class="nav-link" href="/features.html">Features</a>
             </li>
 
 
@@ -72,13 +71,13 @@
 
             
                 <li class="nav-item mr-lg-3 ">
-                    <a class="nav-link" href="/account/join.php">Sign Up</a>
+                    <a class="nav-link" href="/account/join.html">Sign Up</a>
                 </li>
                 <li class="nav-item mr-lg-3 ">
-                    <a class="nav-link" href="/account/beautify.php">Log In</a>
+                    <a class="nav-link" href="/account/beautify.html">Log In</a>
                 </li>
                 <li class="mr-lg-3 ">
-                    <a class="btn btn-dark" href="/business.php">For Business</a>
+                    <a class="btn btn-dark" href="/business.html">For Business</a>
                 </li>
 
             
@@ -87,7 +86,7 @@
 
 
             <li class="nav-item ">
-                <a class="nav-link" href="/help.php">Help</a>
+                <a class="nav-link" href="/help.html">Help</a>
             </li>
 
                     </ul>
@@ -132,7 +131,7 @@
                 <p><a href="#">Careers</a></p>
                 <p><a href="#">Terms for MBF Pros</a></p>
                 <p><a href="#">Terms for MBF Clients</a></p>-->
-                <p><a href="/privacy-policy.php">Privacy</a></p>
+                <p><a href="/privacy-policy.html">Privacy</a></p>
                 <p><a href="#">Sitemap</a></p>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -155,101 +154,6 @@ let servicesList = [["1","Coloring"],["2","Color Correction &amp; New Color"],["
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="/code/scripty-boi.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    if(window.location.pathname === "/business/complete-booking.php" || window.location.pathname === "/business/subscription.php") {
-
-
-    // Create a Stripe client.
-    var stripe = Stripe('pk_live_eMXp61uMY9BXOsioK2FRYmbP00RVvwH3QS');
-
-    // Create an instance of Elements.
-    var elements = stripe.elements();
-
-    // Custom styling can be passed to options when creating an Element.
-    // (Note that this demo uses a wider set of styles than the guide below.)
-    var style = {
-        base: {
-            color: '#32325d',
-            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-            fontSmoothing: 'antialiased',
-            fontSize: '16px',
-            '::placeholder': {
-                color: '#aab7c4'
-            }
-        },
-        invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a'
-        }
-    };
-
-    // Create an instance of the card Element.
-    var card = elements.create('card', {style: style});
-
-    // Add an instance of the card Element into the `card-element` <div>.
-    card.mount('#card-element');
-
-    // Handle real-time validation errors from the card Element.
-    card.addEventListener('change', function(event) {
-        var displayError = document.getElementById('card-errors');
-        if (event.error) {
-            displayError.textContent = event.error.message;
-        } else {
-            displayError.textContent = '';
-        }
-    });
-
-    // Handle form submission.
-    var form = document.getElementById('payment-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        stripe.createToken(card).then(function(result) {
-            if (result.error) {
-                // Inform the user if there was an error.
-                var errorElement = document.getElementById('card-errors');
-                errorElement.textContent = result.error.message;
-            } else {
-                // Send the token to your server.
-                stripeTokenHandler(result.token);
-            }
-        });
-    });
-
-    // Submit the form with the token ID.
-    function stripeTokenHandler(token) {
-        // Insert the token ID into the form so it gets submitted to the server
-        var form = document.getElementById('payment-form');
-        var hiddenInput = document.createElement('input');
-        hiddenInput.setAttribute('type', 'hidden');
-        hiddenInput.setAttribute('name', 'stripeToken');
-        hiddenInput.setAttribute('value', token.id);
-        form.appendChild(hiddenInput);
-
-        // Submit the form
-        form.submit();
-    }
-    }
-</script>
-
-
-
-
-
-
-
 
 
 

@@ -36,7 +36,7 @@
     </script>
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LezDpgUAAAAAFHyjGS9Y5YnMw8LNG05x618108V"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvKf5pJ6VhIfH4f5V4uq589BGT-AfsVvk&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqYlhwlmhEEy4USSnPA-Vg6WR0bJyLdsQ&libraries=places"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
 
 
@@ -92,22 +92,280 @@
                     </ul>
     </div>
 </nav>
+    <div class="row no-gutters">
+        <div class="col-lg-7">
 
-    <div class="join-bg">
-        <div class="container">
-            <div class="white-bg">
-                <h1>Login to your account</h1>
-
-                <div class="join-loader" data-load="beautify">
-                    <img src="https://res.cloudinary.com/dgbhin72l/image/upload/v1552615608/my-beauty-fill/placeholders/loading-gif.gif" alt=""
-                         class="img-fluid">
-                </div><!-- end join loader -->
-            </div><!-- end white bg -->
-        </div><!-- end container -->
-    </div><!-- end join bg -->
+            <style>
+                .brand-search-box {
+                    padding: 30px;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 92px;
+                    background-color: #fff;
+                    z-index: 1000;
+                    border-bottom: 1px solid #eee;
+                }
 
 
-    <footer>
+            </style>
+
+
+
+            <div class="brand-search-box d-none">
+                <form action="/book.html" method="GET" id="business-search-form" class="d-flex">
+                    <input id="brand-search-box-input" name="location" type="text" placeholder="1601 Main St, Dallas, TX 75201" class="form-control form-control-lg" value="Dallas, TX, USA">
+                    <button type="submit" class="btn btn-outline-primary btn-lg">Search</button>
+                    <input type="hidden" class="d-none" name="location-lat">
+                    <input type="hidden" class="d-none" name="location-lng">
+                </form>
+            </div>
+
+            <div class="brand-search">
+                                        <div class="brand-item">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-md-4">
+                                                                        <img src="https://res.cloudinary.com/dgbhin72l/image/upload/v1560475959/business_uploads/hhtqtfzmyhz1l4z5jff5.jpg" class="img-fluid" alt="ZV Salon">
+                                </div><!-- end col -->
+
+                                <div class="col-md-6">
+                                    <section class="brand-item-content">
+                                        <h2>ZV Salon</h2>
+                                        <p class="m-0 font-weight-bold">Perfect haircuts by a team of trained barbers</p>
+                                        <p class="m-0">20+ years, licensed barbers that specialize in all hair styles. Let us treat you with a relaxing experience.</p>
+                                    </section>
+                                </div><!-- end col -->
+
+                                <div class="col-md-2 text-right" style="width: 100px;">
+                                    <div class="pr-4">
+                                        <a href="/business/view.html?id=13&book=19&date=20191101" class="btn btn-primary btn-lg">Book</a>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end brand item -->
+                    
+
+            </div><!-- end brand search -->
+        </div><!-- end col -->
+
+        <div class="col-lg-5 ">
+            <div class="maps-search sticky-top">
+                <div id="google-maps">
+                    <div id="book-google-maps-container"></div>
+                </div>
+            </div>
+        </div><!-- end col -->
+    </div><!-- end row -->
+
+
+
+
+<script>
+
+    let jsonStoreData = [
+
+        { name:'MyBeautyFill Pro', 
+                        id:28,
+                        address:'1 Main St',
+                        city:'Dallas',
+                        state:'TX',
+                        zip:'75201', 
+                        lat:32.78566330, 
+                        lng:-96.77318290},{ name:'ZV Salon', 
+                        id:13,
+                        address:'2380 E Park Blvd #416',
+                        city:'Plano',
+                        state:'TX',
+                        zip:'75074', 
+                        lat:33.02959640, 
+                        lng:-96.68248240},
+    ];
+
+
+
+
+    
+
+
+
+
+
+
+    function store_locator_search(userEntry) {
+        let geocoder = new google.maps.Geocoder();
+        let latitude = 0;
+        let longitude = 0;
+
+        geocoder.geocode({'address': userEntry}, function (results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                latitude = results[0].geometry.location.lat();
+                longitude = results[0].geometry.location.lng();
+            }
+
+            let coordinates = geoBox(latitude, longitude);
+
+            userSearchCoordsLat.value = coordinates['lat'];
+            userSearchCoordsLng.value = coordinates['lng'];
+
+            userSearchForm.submit();
+
+            //store_locator(geoBox(latitude, longitude));
+        });
+    }
+
+
+
+
+
+
+    function geocodeLatLng(geocoder, latlng) {
+        geocoder.geocode({'location': latlng}, function(results, status) {
+            if (status === 'OK') {
+                if (results[0]) {
+                    document.getElementById("brand-search-box-input").value = results[6].formatted_address;
+                }
+            }
+        });
+    }
+
+
+
+
+
+    function geoBox(lat, lng) {
+        if ((lat > 32.3379 && lat < 33.3188) && (lng > -97.6237 && lng < -96.4345)) {
+            // latitude passes
+            //return {lat: lat, lng: lng};
+        } else {
+            //return {lat: 32.777903, lng: -96.791365};
+        }
+
+        return {lat: lat, lng: lng};
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    function store_locator(coords) {
+        // define the map
+        let map = new google.maps.Map(document.getElementById('book-google-maps-container'), {
+            center: coords,
+                        zoom: 13
+        });
+
+
+        // reset the array of markers
+        let map_pin_array = [];
+        let infowindow = new google.maps.InfoWindow();
+
+
+        // generate the store list based on the number of requested stores
+        // currently loads ten stores.
+        for (let i = 0; i < jsonStoreData.length; i++) {
+
+            let fullAddress = jsonStoreData[i]['address'] + " " + jsonStoreData[i]['city'] + ", " + jsonStoreData[i]['state'] + " " + jsonStoreData[i]['zip'];
+
+            // creates the info windows and appends them inside the markers
+            let store_list_entry_infowindow = `
+                <div class='store_list_infowindow' data-order='${i}'>
+                <p class='store_list_entry_name'>${jsonStoreData[i]['name']}</p>
+                <p class='store_list_entry_address'>${fullAddress}</p>
+                <p class='store_list_entry_url'><a href='/business/view.html?id=${jsonStoreData[i]['id']}'>Book Now</a></p>
+                </div>
+                `;
+
+            // creates a new marker with each loop and saves the infowindow with it
+            let map_pin = new google.maps.Marker({
+                position: {lat: jsonStoreData[i]['lat'], lng: jsonStoreData[i]['lng']},
+                map: map,
+                title: jsonStoreData[i]['name'],
+                content: store_list_entry_infowindow,
+                icon: '/images/map-pin-default-lg.png',
+                customID: i
+            });
+
+            // pushes the marker to an array to use later
+            map_pin_array.push(map_pin);
+
+            // binds the click events to each pin
+            bindClick(map_pin);
+        }
+
+        function bindClick(map_pin) {
+            map_pin.addListener('click', function () {
+                infowindow.setContent(this.content);
+                infowindow.open(this.getMap(), this);
+            });
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    /*if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            let geoLat = position.coords.latitude;
+            let geoLng = position.coords.longitude;
+            let geocoder = new google.maps.Geocoder();
+            let geoArray = {lat: geoLat, lng: geoLng};
+
+            //geocodeLatLng(geocoder, geoArray);
+
+            store_locator(geoBox(geoLat, geoLng));
+        }, function(error) {
+            store_locator(geoBox(0, 0));
+        });
+    }*/
+
+
+    let userSearchForm = document.getElementById("business-search-form");
+    let userSearch = userSearchForm.querySelector("input[name='location']")
+    let userSearchCoordsLat = userSearchForm.querySelector("input[name='location-lat']");
+    let userSearchCoordsLng = userSearchForm.querySelector("input[name='location-lng']");
+
+    userSearchForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        let userSearchVal = userSearch.value;
+
+        store_locator_search(userSearchVal);
+    });
+
+    userSearch.addEventListener("keypress", function(e) {
+        if(e.which === 13) {
+            userSearchForm.submit();
+        }
+    });
+
+
+    store_locator(geoBox(32.7766642, -96.7969879));
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -154,25 +412,6 @@ let servicesList = [["1","Coloring"],["2","Color Correction &amp; New Color"],["
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="/code/scripty-boi.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
