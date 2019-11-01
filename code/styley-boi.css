@@ -296,17 +296,25 @@ footer {
 
 /* About Us */
 .about-us-h1 {
-    background-image: url("../assets/images/revised_homepgmbf.svg");
+    background-image: url("../assets/images/MBF-Website-BANNERS-purp-head1.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 60px 0px;
-    font-weight: 100;
-    font-size: 30px;
-    color: white;
 }
 
-
+.about-us-our {
+    color: rgb(16, 214, 181);
+    font-size: 20px;
+}
+.about-us-h2 {
+    background-image: url("../assets/images/MBF-Website-BANNERS-purp-value2.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0px;
+    
+}
 
 
 
