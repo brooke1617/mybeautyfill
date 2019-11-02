@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS mbf;
+CREATE DATABASE mbf;
+
+USE mbf;
+
+CREATE TABLE servicesList(
+  id INT NOT NULL AUTO_INCREMENT,
+  category VARCHAR(60) NOT NULL,
+  services_list_item VARCHAR(60) NOT NULL,
+  
+  PRIMARY KEY (id)
+);
