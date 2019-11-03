@@ -487,9 +487,10 @@ $(document).ready(function() {
         for (let i = 0; i < servicesList.length; i++) {
             let servicesListItem = servicesList[i][1].toLowerCase();
             if(servicesListItem.includes(searchText)) {
-                if(searchCounter < 15) {
+                if(searchCounter < 120) {
                     searchResults += "<button type='button' class='list-group-item list-group-item-action' data-id='" + servicesList[i][0] + "'>" + servicesList[i][1] + "</button>\n";
                     searchCounter++;
+                    
                 }
             }
         }
