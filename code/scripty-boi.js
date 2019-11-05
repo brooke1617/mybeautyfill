@@ -143,7 +143,7 @@ $(document).ready(function() {
         // needs for recaptacha ready
         grecaptcha.ready(function() {
             // response is promise with passed token
-            grecaptcha.execute('6LezDpgUAAAAAFHyjGS9Y5YnMw8LNG05x618108V', {action: 'create_account'}).then(function(token) {
+            grecaptcha.execute('6Le5EMEUAAAAACrzv7rTNsE2Pp9oAn7q51OrBZqb', {action: 'create_account'}).then(function(token) {
                 // add token to form
                 form.querySelector("input[name='g-recaptcha-response']").setAttribute("value", token);
                 form.submit();
@@ -163,7 +163,7 @@ $(document).ready(function() {
         // needs for recaptacha ready
         grecaptcha.ready(function() {
             // response is promise with passed token
-            grecaptcha.execute('6LezDpgUAAAAAFHyjGS9Y5YnMw8LNG05x618108V', {action: 'log_in'}).then(function(token) {
+            grecaptcha.execute('6Le5EMEUAAAAACrzv7rTNsE2Pp9oAn7q51OrBZqb', {action: 'log_in'}).then(function(token) {
                 // add token to form
                 form.querySelector("input[name='g-recaptcha-response']").setAttribute("value", token);
                 form.submit();
