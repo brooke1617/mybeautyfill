@@ -102,6 +102,7 @@ a.navbar-brand {
 .homepage-intro {
     background-size: cover;
     background-position: center;
+    min-width:380px;
     /*margin-bottom: 60px;
     min-height: 80vh;*/
     /*padding: 60px 20px;*/
